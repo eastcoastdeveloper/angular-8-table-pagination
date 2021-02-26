@@ -1,0 +1,38 @@
+
+#table-component {
+  font-family: sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+
+  table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+
+    tr{
+      td:first-child {
+        padding-left: 10px;
+      }
+    }
+
+    td {
+      width: 33.3%;
+      font-size: 13px;
+    }
+
+    thead {
+      th{
+        border-bottom: 1px solid black;
+        text-align: left;
+        padding-bottom: 5px;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 5px 0;
+        border-bottom: 1px solid lightgrey;
+      }
+    }
+  }
+}
