@@ -1,16 +1,16 @@
 <div id="table-component">
-	<h2>Popular Muscle Cars</h2>
+	<p>Popular Muscle Cars</p>
 	<table>
 		<thead>
 			<tr>
-				<th>Year</th>
+				<th class="pl-15">Year</th>
 				<th>Make</th>
 				<th>Model</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let car of cars | paginate: { itemsPerPage: 10, currentPage: p }">
-				<td>{{car.year}}</td>
+				<td class="pl-15">{{car.year}}</td>
 				<td>{{car.make}}</td>
 				<td>{{car.model}}</td>
 			</tr>
@@ -19,8 +19,4 @@
 	<div class="pagination">
 		<pagination-controls (pageChange)="p = $event"></pagination-controls>
 	</div>
-</div>
-
-<div class="dashboard-link">
-	<a href="https://stackblitz.com/@eastcoastdeveloper" target="_blank">See more of my Stackblitz projects here.</a>
 </div>

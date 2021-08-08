@@ -1,15 +1,23 @@
-
 #table-component {
   font-family: sans-serif;
-  max-width: 500px;
   margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 400px;
+
+  >p {
+    background-color: #313b3f;
+    color: #fcdb42;
+    padding: 10px;
+    margin: 0;
+  }
 
   table {
-    margin-top: 20px;
+    margin-top: 15px;
     width: 100%;
     border-collapse: collapse;
 
-    tr{
+    tr {
       td:first-child {
         padding-left: 10px;
       }
@@ -21,11 +29,17 @@
     }
 
     thead {
-      th{
+      font-size: 14px;
+
+      th {
         border-bottom: 1px solid black;
         text-align: left;
         padding-bottom: 5px;
       }
+    }
+
+    .pl-15 {
+      padding-left: 15px;
     }
 
     tbody {
@@ -34,5 +48,31 @@
         border-bottom: 1px solid lightgrey;
       }
     }
+  }
+
+  .pagination {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  ::ng-deep .pagination-next a,
+  ::ng-deep .pagination-previous a {
+    outline: none;
+  }
+
+  ::ng-deep .ngx-pagination .current {
+    border-radius: 4px;
+  }
+
+  ::ng-deep .ngx-pagination a:hover,
+  ::ng-deep .ngx-pagination button:hover {
+    border-radius: 4px;
+  }
+
+  ::ng-deep .ngx-pagination a,
+  ::ng-deep .ngx-pagination button {
+    border-radius: 4px;
+    outline: none;
   }
 }
