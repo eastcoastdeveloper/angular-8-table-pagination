@@ -6,8 +6,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgxPaginationModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, NgxPaginationModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
