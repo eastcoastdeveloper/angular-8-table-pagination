@@ -1,6 +1,17 @@
+.website {
+  font: normal 14px sans-serif;
+  letter-spacing: .5px;
+  display: block;
+  cursor: pointer;
+  background-color: #313b3f;
+  color: #fcdb42;
+  padding: 10px;
+  text-decoration: none;
+  text-align: right;
+}
 #table-component {
   font-family: sans-serif;
-  margin: 0 auto;
+  margin: 15px auto 0 auto;
   border: 1px solid black;
   border-radius: 4px;
   height: 400px;
