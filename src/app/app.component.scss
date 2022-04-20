@@ -1,6 +1,6 @@
 .website {
   font: normal 14px sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   display: block;
   cursor: pointer;
   background-color: #313b3f;
@@ -65,7 +65,7 @@
   .pagination {
     font-size: 14px;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto;
   }
 
   ::ng-deep .pagination-next a,
@@ -75,6 +75,10 @@
 
   ::ng-deep .ngx-pagination .current {
     border-radius: 4px;
+  }
+
+  ::ng-deep .ngx-pagination {
+    padding: 0 !important;
   }
 
   ::ng-deep .ngx-pagination a:hover,
