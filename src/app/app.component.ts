@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarsResponse } from './cars.interface';
 import * as data from './cars.json';
 
 @Component({
@@ -7,7 +8,7 @@ import * as data from './cars.json';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  cars: any = [];
+  cars: CarsResponse[] = [new CarsResponse('year', 'make', 'model')];
   data: any = data;
 
   constructor() {
