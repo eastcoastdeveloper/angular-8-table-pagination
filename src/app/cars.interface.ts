@@ -1,3 +1,5 @@
-export class CarsResponse {
-  constructor(public year: string, public make: string, _model: string) {}
+export interface CarsResponse {
+  year: string;
+  make: string;
+  model: string;
 }

@@ -8,8 +8,9 @@ import * as data from './cars.json';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  cars: CarsResponse[] = [new CarsResponse('year', 'make', 'model')];
+  cars: CarsResponse[] = [];
   data: any = data;
+  p: any;
 
   constructor() {
     for (let key in data.muscleCars) {
