@@ -11,12 +11,15 @@ export class AppComponent {
   cars: CarsResponse[] = [];
   data: any = data;
   p: any;
+  totalVehicles = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(this.cars.length);
+    }, 1000);
+  });
 
   constructor() {
     for (let key in data.muscleCars) {
-      if (data.muscleCars.hasOwnProperty(key)) {
-        this.cars.push(data.muscleCars[key]);
-      }
+      this.cars.push(data.muscleCars[key]);
     }
   }
 }

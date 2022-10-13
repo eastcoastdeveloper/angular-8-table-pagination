@@ -17,11 +17,14 @@
   height: 400px;
   max-width: 500px;
 
-  > p {
+  > .table-details {
     background-color: #313b3f;
     color: #d9a74a;
-    padding: 10px;
     margin: 0;
+    padding: 10px;
+    span:last-child {
+      float: right;
+    }
   }
 
   table {

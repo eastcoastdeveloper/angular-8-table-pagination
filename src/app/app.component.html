@@ -3,7 +3,10 @@
 >
 
 <div id="table-component">
-  <p>Popular Muscle Cars</p>
+  <div class="table-details">
+    <span>Popular Muscle Cars</span>
+    <span>Total Vehicles: {{ totalVehicles | async }}</span>
+  </div>
   <table>
     <thead>
       <tr>
