@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CarsResponse } from './cars.interface';
 
 @Component({
@@ -12,9 +12,9 @@ export class AppComponent {
   p: any;
 
   constructor(private _http: HttpClient) {
-    this._http.get<CarsResponse[]>('assets/cars.json').subscribe(val => {
+    this._http.get<CarsResponse[]>('assets/cars.json').subscribe((val) => {
       this.cars = val;
-      console.log(this.cars)
+      console.log(this.cars);
     });
   }
 }
