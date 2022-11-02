@@ -7,7 +7,7 @@ import { CarsResponse } from './cars.interface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   cars: CarsResponse[] = [];
   p: any;
 
@@ -16,10 +16,5 @@ export class AppComponent implements OnInit{
       this.cars = val;
       console.log(this.cars)
     });
-  }
-
-
-  ngOnInit():void {
-
   }
 }
