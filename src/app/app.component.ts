@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { tap } from 'rxjs';
 import { CarsResponse } from './cars.interface';
 
 @Component({
@@ -12,9 +13,21 @@ export class AppComponent {
   p: any;
 
   constructor(private _http: HttpClient) {
-    this._http.get<CarsResponse[]>('assets/cars.json').subscribe((val) => {
-      this.cars = val;
-      console.log(this.cars);
-    });
+    this.tableDataReq();
+  }
+
+  tableDataReq() {
+    return this._http
+      .get<CarsResponse[]>('assets/cars.json')
+      .pipe(
+        tap({
+          next: (data) => console.log(data),
+          error: (err) => console.log(err),
+          complete: () => console.log('request successful')
+        })
+      )
+      .subscribe((val) => {
+        this.cars = val;
+      });
   }
 }
