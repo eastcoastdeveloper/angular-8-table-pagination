@@ -23,7 +23,7 @@ export class AppComponent {
         tap({
           next: (data: any) => {},
           error: (err: any) => console.log(err),
-          complete: () => console.log('request successful')
+          complete: () => console.log('request successful'),
         })
       )
       .subscribe((val) => {
