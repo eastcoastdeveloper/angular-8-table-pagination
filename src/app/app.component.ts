@@ -21,7 +21,9 @@ export class AppComponent {
       .get<CarsResponse[]>('assets/cars.json')
       .pipe(
         tap({
-          next: (data: any) => {},
+          next: (data: any) => {
+            console.log(data);
+          },
           error: (err: any) => console.log(err),
           complete: () => console.log('request successful'),
         })

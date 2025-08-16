@@ -13,11 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr
-        *ngFor="
-          let car of cars | paginate: { itemsPerPage: 10, currentPage: p }
-        "
-      >
+      <tr *ngFor="let car of cars | paginate: { itemsPerPage: 10, currentPage: p }">
         <td class="pl-15">{{ car.year }}</td>
         <td>{{ car.make }}</td>
         <td>{{ car.model }}</td>
