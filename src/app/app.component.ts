@@ -22,13 +22,14 @@ export class AppComponent {
       .pipe(
         tap({
           next: (data: any) => {
-            console.log(data);
+           
           },
           error: (err: any) => console.log(err),
           complete: () => console.log('request successful'),
         })
       )
       .subscribe((val) => {
+        console.log(val);
         this.cars = val;
       });
   }
